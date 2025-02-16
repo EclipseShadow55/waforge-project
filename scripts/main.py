@@ -1,5 +1,4 @@
 import AccessPoints.scraper as sc
-import AccessPoints.geoloc as gl
 import init_clients
 
 clients = init_clients.get_clients()
@@ -10,7 +9,7 @@ def get_data(origin: str,
              departure_date: str,
              return_date: str,
              adults: str,
-             cildren: str,
+             children: str,
              infants: str,
              trav_class: str,
              airlines: str,

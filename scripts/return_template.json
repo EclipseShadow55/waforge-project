@@ -1,0 +1,34 @@
+[
+	{
+		"trip": {
+			"price": int,
+			"destination_airport": str,
+			"location": {
+				"city": str,
+				"state": str | None,
+				"country": str,
+				"description": str,
+				"activities": list[str],
+				"warnings": list[str] | None,
+				"culture": str,
+				"history": str
+			},
+		},
+		"flight": {
+			"airline": str,
+			"departure": {
+				"date": str,
+				"time": str,
+				"airport": str
+			},
+			"arrival": {
+				"date": str,
+				"time": str,
+				"airport": str
+			},
+			"duration": str,
+			"stops": int,
+			"layovers": list[str] | None
+		},
+	}
+]

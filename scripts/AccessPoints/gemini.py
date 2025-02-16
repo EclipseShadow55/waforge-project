@@ -78,7 +78,7 @@ def get_location(client, data: str):
         "You need to return a list of trips (one is okay though), and for each you need:",
         "   the location with:",
         "       city",
-        "       state",
+        "       state (Optional, return None if there is none)",
         "       country",
         "       a short description of the location (general vibe, what's there, etc.)",
         "       a list of activities that can be done there",

@@ -28,10 +28,12 @@ def get_clients():
     """
     with open("creds.json") as f:
         data = json.load(f)
-    gemini = Auth(client=(genai.Client(api_key=data["gemini"])))
+    gemini = Auth(client=(genai.Client(api_key=data["google"])))
     amadeus = Auth(key=data["amadeus"][0], secret=data["amadeus"][1])
     meteoblue = Auth(key=data["meteoblue"])
+    geocoding = Auth(key=data["geocoding"])
 
     return {"gemini": gemini,
             "amadeus": amadeus,
-            "meteoblue": meteoblue}
+            "meteoblue": meteoblue,
+            "geocoding": geocoding}

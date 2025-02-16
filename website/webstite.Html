@@ -22,6 +22,8 @@
       justify-content: space-between;
       padding: 1rem 2rem;
       background-color: #fff;
+      position: relative;
+      z-index: 10;
     }
 
     .logo {
@@ -59,6 +61,8 @@
       margin: 0 auto;
       padding-bottom: 2rem;
       border-bottom: 1px solid #f0e6da;
+      position: relative;
+      z-index: 10;
     }
 
     .hero-text {
@@ -88,10 +92,24 @@
       height: auto;
     }
 
+    /* Background Video */
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity: 0.5;
+    }
+
     /* Form Section */
     .form-section {
       max-width: 1200px;
       margin: 2rem auto 0 auto;
+      position: relative;
+      z-index: 10;
     }
 
     .form-section h2 {
@@ -198,15 +216,17 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Background Video -->
+    <video class="background-video" autoplay loop muted>
+      <source src="856190-hd_1920_1080_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-text">
         <h1>Find your dream destination within seconds</h1>
         <p>The ultimate last-minute adventure finder. Just input your preferences below to get a freshly generated travel destination.</p>
-      </div>
-      <div class="hero-image">
-        <!-- Replace "plane.png" with the path/URL to your airplane image -->
-        <img src="https://via.placeholder.com/300x200?text=Airplane+Image" alt="Airplane" />
       </div>
     </section>
 
@@ -222,10 +242,9 @@
 
         <!-- Price Range -->
         <div class="form-group">
-            <label for="Price range">Price Range</label>
-            <input type="number" id="Money" name="money" min="0" placeholder="0" />
-          </div>
-  
+          <label for="Price range">Price Range</label>
+          <input type="number" id="Money" name="money" min="0" placeholder="0" />
+        </div>
 
         <!-- Departure Date -->
         <div class="form-group">

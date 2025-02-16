@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 1.8em;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+            animation: fadeUp 1.5s ease-in-out;
+        }
+
+        .weather-section {
+            text-align: center;
+        }
+
+        .weather-section img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .weather-section .real-temp {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .weather-section .apparent-temp {
+            font-size: 1em;
+            margin-top: 5px;
+            color: #555;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h1>Travel Information</h1>
+
+        <div class="section">
+            <h2>Name of Place</h2>
+            <p>Access Finished</p>
+        </div>
+
+        <div class="section">
+            <h2>Image of Place</h2>
+            <p>Not Started</p>
+        </div>
+
+        <div class="section">
+            <h2>Flight Information</h2>
+            <p>Not Started</p>
+        </div>
+
+        <div class="section weather-section">
+            <h2>Weather For the Next 7 Days</h2>
+            <p>API found</p>
+            <img src="mini-picture-url" alt="Mini Picture of Weather">
+            <div class="real-temp">Real Temp</div>
+            <div class="apparent-temp">Apparent Temp</div>
+            <ul>
+                <li>Wind Speed</li>
+                <li>Precipitation</li>
+                <li>Amount</li>
+                <li>Probability</li>
+                <li>Trend over next 14 days</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Currency Exchange Rate</h2>
+            <p>Not Started</p>
+        </div>
+
+        <div class="section">
+            <h2>Hotels in the Area</h2>
+            <p>Not Started</p>
+            <ul>
+                <li>Address</li>
+                <li>Phone</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Fun Things to Do</h2>
+            <p>Access Finished</p>
+        </div>
+
+        <div class="section">
+            <h2>Places to Visit</h2>
+            <p>Access Finished</p>
+        </div>
+
+        <div class="section">
+            <h2>Cons / Warnings</h2>
+            <p>Access Finished</p>
+        </div>
+
+        <div class="section">
+            <h2>Cultural Context</h2>
+            <p>Access Finished</p>
+        </div>
+
+        <div class="section">
+            <h2>Historical Context</h2>
+            <p>Access Finished</p>
+        </div>
+    </div>
+
+</body>
+</html>

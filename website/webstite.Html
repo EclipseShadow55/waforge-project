@@ -222,9 +222,10 @@
 
         <!-- Price Range -->
         <div class="form-group">
-          <label for="priceRange">Pick Your Price Range</label>
-          <input type="range" id="priceRange" name="priceRange" min="100" max="2000" />
-        </div>
+            <label for="Price range">Price Range</label>
+            <input type="number" id="Money" name="money" min="0" placeholder="0" />
+          </div>
+  
 
         <!-- Departure Date -->
         <div class="form-group">
@@ -277,8 +278,8 @@
 
         <!-- Other Preferences -->
         <div class="form-group">
-          <label for="preferences">Any Other Preferences?</label>
-          <textarea id="preferences" name="preferences" rows="3" placeholder="e.g. wheelchair assistance, dietary restrictions"></textarea>
+          <label for="preferences">Description of Destination? (adjectives) (add commas between each adjective)</label>
+          <textarea id="preferences" name="preferences" rows="3" placeholder="e.g. tropical, beach, snowy, mountainanous"></textarea>
         </div>
 
         <!-- Submit Button -->
@@ -289,23 +290,6 @@
     </section>
   </main>
 
-  <script>
-    // Simple form handling for demonstration
-    const form = document.getElementById('adventure-form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      // Gather form data
-      const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
-
-      // Simple example: just log to console or alert
-      console.log("Form data:", data);
-      alert("Your adventure is being generated! Check the console for form data.");
-    });
-  </script>
+  <script src="javascript.js"></script>
 </body>
 </html>

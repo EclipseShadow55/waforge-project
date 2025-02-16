@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AdventureCue</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+    }
+
+    /* Header / Navbar */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* Main / Hero Section */
+    main {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #FFF6ED; /* Light peach background */
+      padding: 2rem;
+      position: relative;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #f0e6da;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #2f2e41;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .hero-image {
+      max-width: 40%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Form Section */
+    .form-section {
+      max-width: 1200px;
+      margin: 2rem auto 0 auto;
+    }
+
+    .form-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2f2e41;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group input[type="date"],
+    .form-group select,
+    .form-group textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .form-group input[type="range"] {
+      margin: 0.4rem 0;
+    }
+
+    .form-group input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 0.5rem;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Submit button */
+    .form-group-submit {
+      grid-column: 1 / -1; /* Span entire row */
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .form-group-submit button {
+      background-color: #ff7e5f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group-submit button:hover {
+      background-color: #ff663f;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-text {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+      .hero-image {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo">AdventureCue</div>
+    <nav>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">YOO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Find your dream destination within seconds</h1>
+        <p>The ultimate last-minute adventure finder. Just input your preferences below to get a freshly generated travel destination.</p>
+      </div>
+      <div class="hero-image">
+        <!-- Replace "plane.png" with the path/URL to your airplane image -->
+        <img src="https://via.placeholder.com/300x200?text=Airplane+Image" alt="Airplane" />
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Tell us what you need</h2>
+      <form id="adventure-form">
+        <!-- Airport -->
+        <div class="form-group">
+          <label for="airport">Airport You Want to Leave From</label>
+          <input type="text" id="airport" name="airport" placeholder="e.g. JFK, LAX" />
+        </div>
+
+        <!-- Price Range -->
+        <div class="form-group">
+          <label for="priceRange">Pick Your Price Range</label>
+          <input type="range" id="priceRange" name="priceRange" min="100" max="2000" />
+        </div>
+
+        <!-- Departure Date -->
+        <div class="form-group">
+          <label for="departureDate">Departure Date</label>
+          <input type="date" id="departureDate" name="departureDate" />
+        </div>
+
+        <!-- Return Date -->
+        <div class="form-group">
+          <label for="returnDate">Return Date</label>
+          <input type="date" id="returnDate" name="returnDate" />
+        </div>
+
+        <!-- Minimum Travel Class -->
+        <div class="form-group">
+          <label for="travelClass">Minimum Travel Class</label>
+          <select id="travelClass" name="travelClass">
+            <option value="economy">Economy</option>
+            <option value="premium">Premium Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First</option>
+          </select>
+        </div>
+
+        <!-- Direct Flight -->
+        <div class="form-group">
+          <label class="checkbox-label" for="directFlight">
+            <input type="checkbox" id="directFlight" name="directFlight" />
+            Direct Flight?
+          </label>
+        </div>
+
+        <!-- Number of Adults -->
+        <div class="form-group">
+          <label for="adults">Number of Adults</label>
+          <input type="number" id="adults" name="adults" min="0" placeholder="0" />
+        </div>
+
+        <!-- Number of Children -->
+        <div class="form-group">
+          <label for="children">Number of Children</label>
+          <input type="number" id="children" name="children" min="0" placeholder="0" />
+        </div>
+
+        <!-- Number of Infants -->
+        <div class="form-group">
+          <label for="infants">Number of Infants</label>
+          <input type="number" id="infants" name="infants" min="0" placeholder="0" />
+        </div>
+
+        <!-- Other Preferences -->
+        <div class="form-group">
+          <label for="preferences">Any Other Preferences?</label>
+          <textarea id="preferences" name="preferences" rows="3" placeholder="e.g. wheelchair assistance, dietary restrictions"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group form-group-submit">
+          <button type="submit">Generate Adventure</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    // Simple form handling for demonstration
+    const form = document.getElementById('adventure-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Gather form data
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      // Simple example: just log to console or alert
+      console.log("Form data:", data);
+      alert("Your adventure is being generated! Check the console for form data.");
+    });
+  </script>
+</body>
+</html>
